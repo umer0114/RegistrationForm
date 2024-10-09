@@ -15,7 +15,7 @@ describe('RegistrationForm Component', () => {
         alertMock.mockRestore();
     });
 
-  test.skip('renders the registration form fields', () => {
+  test('renders the registration form fields', () => {
     render(<RegistrationForm />);
 
     // Assert that all fields and buttons are present in the document
@@ -46,7 +46,7 @@ describe('RegistrationForm Component', () => {
     expect(alertMock).toHaveBeenCalled();
   });
 
-  test.skip('form submission not allowed if password mismatch', () => {
+  test('form submission not allowed if password mismatch', () => {
     render(<RegistrationForm />);
 
     // Simulate typing mismatching passwords
@@ -64,7 +64,7 @@ describe('RegistrationForm Component', () => {
     expect(alertMock).not.toHaveBeenCalled();
   });
 
-  test.skip('form submission not allowed if invalid email address', () => {
+  test('form submission not allowed if invalid email address', () => {
     render(<RegistrationForm />);
 
     // Simulate typing invalid email

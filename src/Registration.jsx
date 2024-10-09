@@ -15,9 +15,10 @@ export const RegistrationForm = () => {
 
     const handleSubmit = (event) =>  {
         event.preventDefault();
+        setRPasswordError(false);
+        setEmailError(false);
 
-        console.log('-------------');
-        console.log('password: ', password);
+
 
         // Check for password mismatch
         if (password !== rPassword) {
@@ -78,7 +79,7 @@ export const RegistrationForm = () => {
                     color="secondary"
                     type="password"
                     value={rPassword}
-                    error={setRPasswordError}
+                    error={rPasswordError}
                     helperText={rPasswordError ? "Passwords do not match" : ""}
                     fullWidth
                     sx={{mb: 3}}
